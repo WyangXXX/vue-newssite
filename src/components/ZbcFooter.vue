@@ -1,10 +1,10 @@
 <template>
-  <div>这是首页</div>
+  <div>真不戳底部</div>
 </template>
 
 <script>
 export default {
-  name: 'HomeView',
+
 }
 </script>
 

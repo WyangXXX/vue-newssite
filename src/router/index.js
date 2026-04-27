@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '@/views/Home.vue'
-import List from '@/views/List.vue'
-import Detail from '@/views/Detail.vue'
+import Home from '@/views/ZBcHome.vue'
+import List from '@/views/ZbcList.vue'
+import Detail from '@/views/ZbcNewsDetail.vue'
 
 Vue.use(VueRouter)
 

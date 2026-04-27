@@ -1,24 +1,101 @@
-# vue-newssite
+# 基于 Vue2 的静态新闻展示网站
 
-## Project setup
+## 项目简介
+
+本项目是一个基于 Vue2 框架开发的静态新闻展示网站，采用单页面应用（SPA）架构，实现了新闻的浏览、分类筛选及详情展示等功能。项目不依赖后端和数据库，所有数据均通过本地静态数据模拟完成。
+
+该项目旨在通过前端技术模拟真实新闻网站的基本功能结构，提升组件化开发与页面组织能力。
+
+---
+
+## 技术栈
+
+* Vue2
+* Vue Router
+* JavaScript (ES6)
+* HTML5 + CSS3
+
+---
+
+## 项目结构
+
+```bash
+src/
+├── assets/          # 静态资源
+    ├── img/
+    ├── video/ 
+├── components/      # 公共组件
+│   ├── ZbcBanner.vue   # banner图
+│   ├── ZbcFooter.vue  # 底部
+│   ├── ZbcHeader.vue # 顶部导航栏
+│   ├── ZbcMain.vue # 单条新闻
+├── views/           # 页面组件
+│   ├── ZbcHome.vue     # 首页
+│   ├── ZbcList.vue     # 新闻列表页
+│   └── ZbcNewsDetail.vue   # 新闻详情页
+├── router/
+    ├── index.js          # 路由配置
+├── data/            # 本地模拟数据
+├── App.vue          # 根组件
+└── main.js          # 入口文件
 ```
+
+---
+
+## 功能模块
+
+### 首页
+
+* 展示推荐新闻
+* 提供全局导航入口
+
+---
+
+## 💡 项目特点
+
+* 采用组件化开发思想，提高代码复用性
+* 使用 Vue Router 实现页面跳转
+* 使用本地数据模拟接口，体现前后端分离思想
+* 页面结构清晰，模块划分合理
+
+---
+
+## 🧪 项目运行
+
+```bash
+# 安装依赖
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
+# 启动项目
 npm run serve
 ```
 
-### Compiles and minifies for production
+运行后在浏览器打开：
+
 ```
-npm run build
+http://localhost:8080
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+---
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 页面说明
+
+* 首页：展示推荐新闻及导航
+* 列表页：展示新闻列表及分类筛选
+* 详情页：展示新闻具体内容
+
+---
+
+## 后续优化方向
+
+* 增加搜索功能（关键词过滤）
+* 优化 UI 设计（卡片布局、美化界面）
+* 接入真实后端接口
+
+---
+
+## 项目总结
+
+本项目通过 Vue2 框架实现了一个完整的静态新闻展示系统，涵盖了组件化开发、路由管理、数据渲染等前端核心技术。通过本次课程设计，进一步加深了对前端工程化开发流程的理解。
+
+---

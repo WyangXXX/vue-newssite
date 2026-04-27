@@ -1,10 +1,10 @@
 <template>
-  <div>这是详情页</div>
+  <div>真不戳主体</div>
 </template>
 
 <script>
 export default {
-  name: 'DetailView',
+
 }
 </script>
 
