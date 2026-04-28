@@ -1,18 +1,22 @@
 <template>
-  <div>
-    <ZbcHeader />
-    <ZbcBanner />
+  <div class="home">
+    <ZbcBanner></ZbcBanner>
+    <ZbcMain></ZbcMain>
   </div>
 </template>
 
 <script>
-import ZbcHeader from '@/components/ZbcHeader.vue'
-import ZbcBanner from '@/components/ZbcBanner.vue'
+import ZbcBanner from '@/components/home/ZbcBanner.vue'
+import ZbcMain from '@/components/home/ZbcMain.vue'
 
 export default {
   components: {
-    ZbcHeader,
-    ZbcBanner
-  }
+    ZbcBanner,
+    ZbcMain,
+  },
 }
 </script>
+
+<style scoped>
+
+</style>

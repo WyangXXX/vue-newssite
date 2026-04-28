@@ -144,8 +144,8 @@ export default {
 }
 
 .navbar-nav li a {
-    display: inline-block;
-    line-height: 70px;
+  display: inline-block;
+  line-height: 70px;
   color: #fff;
   text-decoration: none;
   font-size: 15px;
