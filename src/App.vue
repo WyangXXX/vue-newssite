@@ -17,8 +17,6 @@ src/
 │   ├── home/                   # 首页核心模块
 │   │   ├── ZbcBanner.vue       # 轮播图
 │   │   ├── ZbcMain.vue         # 主体容器（三栏布局）
-│   │   │
-│   │   ├── ZbcCategory.vue     # 左侧分类导航
 │   │   ├── ZbcNewsList.vue     # 中间新闻列表
 │   │   ├── ZbcNewsCard.vue     # 单条新闻卡片
 │   │   │
@@ -27,11 +25,7 @@ src/
 │   │   └── ZbcHot.vue          # 热搜模块
 ├── views/                      # 页面级结构
 │   ├── ZbcHome.vue                # 首页（拼装所有组件）
-├── data/                       # mock数据（核心）
-│   ├── banner.js               # 轮播图数据
-│   ├── news.js                # 新闻数据
-│   ├── category.js            # 分类数据（建议加）
-│   └── hot.js                 # 热搜数据（建议加）
+│   ├── ZbcNewsDetail.vue                # 详情页（拼装所有组件）
 ├── router/
 │   └── index.js               # 路由配置
 ├── style/
@@ -46,7 +40,7 @@ src/
 		<!-- 头部 -->
 		<ZbcHeader></ZbcHeader>
 		<!-- 网页 -->
-			<router-view></router-view>
+		<router-view></router-view>
 		<!-- 底部 -->
 		<ZbcFooter></ZbcFooter>
 	</div>

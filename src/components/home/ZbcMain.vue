@@ -25,6 +25,10 @@ export default {
 <style scoped>
 .main-container {
   display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 .left {

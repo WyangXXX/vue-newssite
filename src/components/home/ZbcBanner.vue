@@ -6,9 +6,9 @@
 				class="pic"
 				:style="{ transform: `translateX(-${currentIndex * 100}%)` }">
 				<li v-for="(item, index) in banners" :key="index">
-					<a href="#">
+					<router-link :to="'/detail?id=' + item.id">
 						<img :src="item.img" alt="" />
-					</a>
+					</router-link>
 				</li>
 			</ul>
 
@@ -21,8 +21,10 @@
 						:key="index"
 						@mouseenter="handleHover(index)"
 						:class="{ active: currentIndex === index }">
-						<h4>{{ item.title }}</h4>
-						<p>{{ item.desc }}</p>
+							<router-link :to="'/detail?id=' + item.id">
+								<h4>{{ item.title }}</h4>
+								<p>{{ item.desc }}</p>
+						</router-link>
 					</li>
 				</ul>
 			</div>
@@ -42,34 +44,15 @@
 </template>
 
 <script>
-import banner1 from '@/assets/img/banner1.png'
-import banner2 from '@/assets/img/banner2.png'
-import banner3 from '@/assets/img/banner3.png'
-
+import { newsList } from "@/data/news.js";
 export default {
+	
 	name: 'ZbcBanner',
 	data() {
 		return {
 			currentIndex: 0,
 			timer: null,
-
-			banners: [
-				{
-					img: banner1,
-					title: 'AI技术再突破，引发行业震动',
-					desc: '多家科技公司发布新模型，性能大幅提升',
-				},
-				{
-					img: banner2,
-					title: '全球经济形势持续变化',
-					desc: '多国调整政策，应对市场波动',
-				},
-				{
-					img: banner3,
-					title: '体育赛事迎来高潮阶段',
-					desc: '多场焦点比赛吸引全球观众关注',
-				},
-			],
+			banners: newsList.slice(0, 4)
 		}
 	},
 
@@ -104,9 +87,9 @@ export default {
 
 <style scoped>
 .banner {
-	width: 1440px;
+	width: 90%;
 	height: 500px;
-	margin: 0 auto;
+	margin: 20px auto;
 	background-color: #0a1f44;
 }
 

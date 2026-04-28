@@ -2,16 +2,16 @@
   <li class="news-card">
     <!-- 左：图片 -->
     <div class="img-box">
-      <img :src="news.imgUrl" :alt="news.title" />
+      <img :src="news.img" :alt="news.title" />
     </div>
 
     <!-- 右：内容 -->
     <div class="content">
       <!-- 标题 -->
       <h3 class="title">
-        <a :href="news.link" target="_blank">
+        <router-link :to="`/detail?id=${news.id}`">
           {{ news.title }}
-        </a>
+        </router-link>
       </h3>
 
       <!-- 简介 -->
@@ -33,6 +33,7 @@
 
 <script>
 export default {
+  name: 'ZbcNewsCard',
   props: {
     news: Object
   }
