@@ -1,15 +1,15 @@
 <template>
-  <div>
-    <h1>数据新闻</h1>
+  <div class="banner">
+    
   </div>
 </template>
 
 <script>
 export default {
-  name: "ZbcData",
+  name: 'CategoryBanner',
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

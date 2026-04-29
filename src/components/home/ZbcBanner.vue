@@ -6,7 +6,7 @@
 				class="pic"
 				:style="{ transform: `translateX(-${currentIndex * 100}%)` }">
 				<li v-for="(item, index) in banners" :key="index">
-					<router-link :to="'/detail?id=' + item.id">
+					<router-link :to="`/detail/${item.id}`">
 						<img :src="item.img" alt="" />
 					</router-link>
 				</li>
@@ -21,7 +21,7 @@
 						:key="index"
 						@mouseenter="handleHover(index)"
 						:class="{ active: currentIndex === index }">
-							<router-link :to="'/detail?id=' + item.id">
+							<router-link :to="`/detail/${item.id}`">
 								<h4>{{ item.title }}</h4>
 								<p>{{ item.desc }}</p>
 						</router-link>
@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import { newsList } from "@/data/news.js";
+import { bannerList } from "@/data/banner.js";
 export default {
 	
 	name: 'ZbcBanner',
@@ -52,7 +52,7 @@ export default {
 		return {
 			currentIndex: 0,
 			timer: null,
-			banners: newsList.slice(0, 4)
+			banners: bannerList
 		}
 	},
 
@@ -132,7 +132,7 @@ export default {
 		rgba(0, 76, 155, 0.95),
 		rgba(0, 40, 90, 0.95)
 	);
-	padding-top: 20px;
+	padding-top: 10px;
 }
 
 .banner .subnav li {

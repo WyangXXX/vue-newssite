@@ -1,16 +1,19 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import ZbcHome from '@/views/ZbcHome.vue'
+
 import ZbcLogin from '@/views/ZbcLogin.vue'
 import ZbcSignup from '@/views/ZbcSignup.vue'
+import UserProfile from '@/views/UserProfile.vue'
+
 import ZbcNewsDetail from '@/views/ZbcNewsDetail.vue'	
-import ZbcHome from '@/views/ZbcHome.vue'
+
 import ZbcGlobal from '@/views/ZbcGlobal.vue'
 import ZbcDomestic from '@/views/ZbcDomestic.vue'
 import ZbcSociety from '@/views/ZbcSociety.vue'
-import ZbcData from '@/views/ZbcData.vue'
-
-
+import ZbcFinance from '@/views/ZbcFinance.vue'
+import HotNews from '@/views/HotNews.vue'
 
 Vue.use(VueRouter)
 
@@ -33,7 +36,7 @@ const router = new VueRouter({
 			component:ZbcSignup,
 		},
 		{
-			path:'/detail',
+			path:'/detail/:id',
 			component:ZbcNewsDetail,
 		},
 		{
@@ -42,16 +45,24 @@ const router = new VueRouter({
 		},
 		{
 			path:'/domestic',
-			component:ZbcDomestic,
+			component:ZbcDomestic,		
 		},
 		{
 			path:'/society',
 			component:ZbcSociety,
 		},
 		{
-			path:'/data',
-			component:ZbcData,
+			path:'/finance',
+			component:ZbcFinance,
 		},
+		{
+			path:'/hotnews',
+			component:HotNews,
+		},
+		{
+			path:'/userprofile',
+			component:UserProfile,
+		}
 		],
 })
 

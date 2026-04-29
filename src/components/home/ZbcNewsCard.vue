@@ -9,7 +9,7 @@
     <div class="content">
       <!-- 标题 -->
       <h3 class="title">
-        <router-link :to="`/detail?id=${news.id}`">
+        <router-link :to="`/detail/${news.id}`">
           {{ news.title }}
         </router-link>
       </h3>

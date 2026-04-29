@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="banner">
-			<img src="../assets/img/global.png" alt="" />
+			<img src="../assets/img/finance.png" alt="" />
 		</div>
 		<div class="news-grid">
 			<NewsItem v-for="item in newsList" :key="item.id" :news="item" />
@@ -11,16 +11,16 @@
 
 <script>
 import NewsItem from '@/components/category/NewsItem.vue'
-import { globalList } from '@/data/global.js'
+import { financeList } from '@/data/finance.js'
 
 export default {
-	name: 'ZbcGlobal',
+	name: 'ZbcFinance',
 	components: {
 		NewsItem,
 	},
 	data() {
 		return {
-			newsList: globalList,
+			newsList: financeList,
 		}
 	},
 }

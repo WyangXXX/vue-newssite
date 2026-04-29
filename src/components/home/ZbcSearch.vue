@@ -1,50 +1,44 @@
 <template>
   <div class="search-box">
-    <input
-      type="text"
-      v-model="keyword"
-      placeholder="搜索新闻..."
-    />
-
-    <button @click="handleSearch">搜索</button>
+    <input type="text" placeholder="搜索功能开发中" disabled />
+    <button disabled>搜索</button>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      keyword: ""
-    };
-  },
-  methods: {
-    handleSearch() {
-      console.log("搜索内容：", this.keyword);
-    }
-  }
-};
+  name: 'ZbcSearch'
+}
 </script>
 
 <style scoped>
 .search-box {
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .search-box input {
   flex: 1;
-  padding: 8px;
-  border: 1px solid #ddd;
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px 0 0 6px;
+  font-size: 14px;
+  background-color: #fafafa;
+  color: #999;
+  outline: none;
+}
+
+.search-box input:disabled {
+  cursor: not-allowed;
 }
 
 .search-box button {
-  padding: 8px 12px;
-
-
-  
+  padding: 10px 16px;
   border: none;
-  background: #004c98;
+  background: #bbbbbb;
   color: #fff;
-  cursor: pointer;
+  cursor: not-allowed;
+  border-radius: 0 6px 6px 0;
+  font-size: 14px;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
 	<ul class="news-list">
-		<ZbcNewsCard v-for="item in newsList" :key="item.id" :news="item" />
+		<ZbcNewsCard v-for="i in 10" :key="i" :news="newsList[i]" />
 	</ul>
 </template>
 
